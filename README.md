@@ -34,14 +34,22 @@ Each team should fill in the blanks <<>> and add additional content that the tea
 Our product will be delivered using an Agile methodology that embraces the DevOps culture. Please note that our culture embraces change and these documents are treated as living, breathing artefacts that will be continuously updated.
 
 # Scrum Master
-<<list week number, student name>>
+Sprint 1: Joseph O'Neill
 Rotating scrum master so that everyone gets to experience the role once.
 
 # Product Owner
-<<List name>> (Permanent)
+Sprint 1: Dean Ryan
 
-# Rockstars
-<<list team member names here>>
+# Project Manager
+Sprint 1: Amofa Baffoe
+
+# Stake Holder
+Sprint 1: Hossain Al Masud
+
+# Developer
+Sprint 1: Mathieu Bizumeremyi
+Sprint 1: Suman Dey
+
 
 
 # Project Deadline
@@ -51,7 +59,7 @@ Refer to BB for deadlines
 Clean and simple design
 User access levels (client, administrator)
 Includes at least one self-developed API and one web service
-To be run over <specify platform>
+To be run over AWS
 
 # Frameworks
 We will be using MongoDB for our database
@@ -62,7 +70,7 @@ Regex for cleansing and validation of data before sending it to the database.
 
 # Useful Links
  - Project Slack: https://atudevops.slack.com
- - GitHub: <<staff member's GitHub repo for the student project>>
+ - GitHub: https://github.com/deanryandevops/WednesdaysWickedAdventures
 
 # More Information
 For more information, visit our other sections
@@ -85,7 +93,7 @@ These are the current Risks on the project, re-aligned on a weekly basis
 
 
 # Tenants of Design
-The code framework to be used will be <<>>, we will be programming using the IDE << >>
+The code framework to be used will be Java for back end, HTML/CSS/JS for front end, and we will be programming using the IDE Eclipse.
 
 # Security:
 - << >>: uses static analysis to find bugs in code. 
@@ -93,7 +101,7 @@ The code framework to be used will be <<>>, we will be programming using the IDE
 - <<>>.
 
 # Testing:
-    
+Junit will be used for testing.
     
 # Environments:
     staging and production
@@ -121,14 +129,14 @@ The code framework to be used will be <<>>, we will be programming using the IDE
     Use Agile methodologies in the project at all times.
 
 # Meetings
-Stand-ups will occur Every <<day/time>> during class and <<day/time>> using an Automated bot. Two per week.
-The order in which people give their updates will be << >>.
+Stand-ups will occur Every Tuesday during class and Monday at 7pm. Two per week.
+The order in which people give their updates will be chosen by the scrum master within the stand up.
 Updates will be in the form: What I've done, Impediments, What I plan to do.
-Sprint planning will occur at <<date/time>> every week.
-Please add and update items within <<issue management tool>> prior to the sprint planning session.
-Sprint retro will be at the end of our sprint on <<Date/Time>> (timebox retro for 15 minutes, to be organised by the scrum master).
-Points raised in the sprint retro will be noted and posted on the Slack channel by the Scrum Master. The Scrum Master is rotated per team member every week.
-Backlog refinement will happen on <<date/time>> during our sprint.
+Sprint planning will occur on Monday every 2 weeks.
+Please add and update items within Jira prior to the sprint planning session.
+Sprint retro will be at the end of our sprint on Monday at 7pm (timebox retro for 15 minutes, to be organised by the scrum master).
+Points raised in the sprint retro will be noted and posted on the Slack channel by the Scrum Master. The Scrum Master is rotated per team member every two week.
+Backlog refinement will happen on Wednesday's during our sprint.
 Task estimation will be done using << >>. 
 Come prepared for meetings.
 Be on time for stand-ups and meetings.
@@ -175,3 +183,35 @@ The team's current story point velocity is "N/A".
 
 # Definition of Ready
 <<List criteria that are common here>>
+
+# Sprint 1
+# Stand up (22/01/2025)
+Dean:
+    Work Done: randomized the roles for each team member and notified the group.
+    Next tasks: Begin setting up Epics within Jira
+
+Joseph:
+    Work done: Created project in Jira and invited the team. Set up regular meeting in Teams for Mondays stand up.
+    Next tasks: update the Readme to include the notes.
+
+Mathieu:
+    Waiting for Epics to be created, before being able to pick up some tasks.
+
+Also discussed a meeting to be held after class on Tuesday, to talk through Epics, and finalize tech stack.
+
+# Stand up (23/01/2025)
+Dean:
+    Work Done: Epics created in Jira.
+    Next tasks: Discuss with team breakdown of epics, and tech stack going forward.
+
+Joseph: 
+    Next tasks: Need to make sure everyone can access the Teams for the Monday stand ups/any other meetings going forward.
+
+Mathieu:
+Amofa: 
+Hossain:
+    Tasks will be split & picked up by team when we have a sesion to discuss the epics created.
+
+Note: There was some issues regarding connecting to Teams, which will need to be resolved.
+A meeting after this stand up, to discuss task alignment and further planning was scheduled. 
+
