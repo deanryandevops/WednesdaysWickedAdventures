@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.atu.WednesdaysWickedAdventures"},{"l":"com.atu.WednesdaysWickedAdventures.controller"},{"l":"com.atu.WednesdaysWickedAdventures.model"},{"l":"com.atu.WednesdaysWickedAdventures.repository"},{"l":"com.atu.WednesdaysWickedAdventures.service"}];updateSearchResults();
