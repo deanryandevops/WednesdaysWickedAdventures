@@ -12,15 +12,27 @@ pipeline {
         DOCKER_HUB_REPO = 'l00188387/wednesdayswickedadventures'
         EC2_USER = 'ubuntu'
         APP_URL = "http://${params.AWS_IP}:8000"
+        SLACK_CHANNEL = '#deployment-pipeline'
     }
 
     stages {
-        
         stage('AWS_IP') {
             steps {
                 echo "Hello IP, ${params.AWS_IP}!"
             }
         }
+
+        stage('Notify Slack Deployment') {
+            steps {
+                slackSend(
+                    channel: '#deployment-pipeline',
+                    color: "good",
+                    message: 'Deployment Started',
+                    tokenCredentialId: 'slack-token'
+                )
+            }
+        }
+        
         stage('Login to Docker Hub') {
             steps {
                 script {
@@ -30,7 +42,7 @@ pipeline {
         }
         stage('Clone Repository') {
             steps {
-                git branch: 'main', url: 'https://github.com/deanryandevops/WednesdaysWickedAdventures.git'
+                git branch: 'develop', url: 'https://github.com/deanryandevops/WednesdaysWickedAdventures.git'
             }
         }
         
@@ -71,11 +83,11 @@ pipeline {
     post {
         success {
             echo "Pipeline succeeded! 🎉"
-            // Perform actions for success (e.g., send a notification)
+            slackSend channel: "${env.SLACK_CHANNEL}",color: "good", tokenCredentialId: 'slack-token', message: "Deployment succeeded! 🎉"
         }
         failure {
-            echo "Pipeline failed! ❌"
-            // Perform actions for failure (e.g., send an alert)
+        echo "Pipeline failed! ❌"
+        slackSend channel: "${env.SLACK_CHANNEL}",color: "danger", tokenCredentialId: 'slack-token', message: "Deployment  failed! 😢"
         }
         unstable {
             echo "Pipeline is unstable! ⚠️"
