@@ -1,0 +1,14 @@
+Project work by Hossain Al Masud
+
+This is a Team project by ATU (Letterkenny)
+
+We Are in Group 3 and Project Name is : Wednesday’s Wicked Adventures
+
+The end customer would like an online booking system for range of horror themed adventure 
+parks. Their most popular product is Risky Rollercoaster. The system must take details of customer 
+map them to the themed adventure park of their choice along with a single box for extra set of 
+health and warning checkboxes.
+
+Resources:
+https://imagecompressor.io/compress-to-exact-size
+https://pixabay.com/
