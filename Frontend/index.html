@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horror Park Booking</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="tab-menu">
+      <button class="tab-button active" data-tab="booking">Booking</button>
+      <button class="tab-button" data-tab="admin">Receipt</button>
+    </div>
+
+    <!-- Booking Tab -->
+    <div class="tab-content active" id="booking">
+      <h1 class="title">Wednesday Wicked</h1>
+      <form id="bookingForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Enter your name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="numberofticket">Number of Ticket</label>
+          <input id="numberofticket" name="numberofticket" type="number" placeholder="Enter number of ticket" required>
+        </div>
+
+        <div class="form-group">
+          <label for="park">Select Adventure Park</label>
+          <select id="park" name="park" required>
+            <option value="">Choose a park</option>
+            <option value="Risky Rollercoaster">Risky Rollercoaster</option>
+            <option value="Haunted Mansion">Haunted Mansion</option>
+            <option value="Zombie Escape">Zombie Escape</option>
+            <option value="Bungee Jumping">Bungee jumping</option>
+          </select>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <input id="healthWarning" type="checkbox" required>
+          <label for="healthWarning">I acknowledge the health and safety warnings</label>
+        </div>
+
+        <button type="submit" class="submit-button">Submit Booking</button>
+      </form>
+    </div>
+
+    <!-- Admin Tab -->
+    <div class="tab-content" id="admin">
+      <h1 class="title">Receipt</h1>
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Park</th>
+            <th>Ticket number</th>
+            <th>ID</th>
+          </tr>
+        </thead>
+        <tbody id="adminTableBody">
+          <!-- Booking data will be inserted here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
