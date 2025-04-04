@@ -12,7 +12,7 @@ pipeline {
         DOCKER_HUB_REPO = 'l00188387/ww-front-end'
         EC2_USER = 'ec2-user'
         APP_URL = "http://${params.AWS_IP}"
-        SLACK_CHANNEL = '#deployment-pipeline'
+        SLACK_CHANNEL = '#deployment-front-end-pipeline'
     }
 
     stages {
@@ -24,7 +24,7 @@ pipeline {
         stage('Notify Slack Deployment') {
             steps {
                 slackSend(
-                    channel: '#deployment-pipeline',
+                    channel: '#deployment-front-end-pipeline',
                     color: "good",
                     message: 'Deployment Started',
                     tokenCredentialId: 'slack-token'
@@ -103,11 +103,11 @@ pipeline {
     post {
         success {
             echo "Pipeline succeeded! 🎉"
-            slackSend channel: "${env.SLACK_CHANNEL}",color: "good", tokenCredentialId: 'slack-token',message: "Deployment succeeded! 🎉\nApplication is live at: http://${AWS_IP}:8080"
+            slackSend channel: "${env.SLACK_CHANNEL}",color: "good", tokenCredentialId: 'slack-token',message: "Deployment front end succeeded! 🎉\nApplication is live at: http://${AWS_IP}:8080"
         }
         failure {
         echo "Pipeline failed! ❌"
-        slackSend channel: "${env.SLACK_CHANNEL}",color: "danger", tokenCredentialId: 'slack-token', message: "Deployment  failed! 😢"
+        slackSend channel: "${env.SLACK_CHANNEL}",color: "danger", tokenCredentialId: 'slack-token', message: "Deployment front end failed! 😢"
         }
         unstable {
             echo "Pipeline is unstable! ⚠️"
