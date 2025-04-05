@@ -1,4 +1,4 @@
-# Security Group for Public Instances (Open to SSH & HTTP)
+# Security Group for Public Instances (Open to SSH, HTTP, Docker, Grafana and Prometheus)
 resource "aws_security_group" "public_sg" {
   vpc_id = aws_vpc.main.id
 
@@ -15,6 +15,31 @@ resource "aws_security_group" "public_sg" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
+
+  # Allow access to your application on port docker 8080 from anywhere
+  ingress {
+    from_port   = 8080
+    to_port     = 8080
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  # Allow access to your application on port grafana from anywhere
+  ingress {
+    from_port   = 3000
+    to_port     = 3000
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+    # Allow access to your application on port Prometheus from anywhere
+  ingress {
+    from_port   = 9090
+    to_port     = 9090
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
 
   egress {
     from_port   = 0

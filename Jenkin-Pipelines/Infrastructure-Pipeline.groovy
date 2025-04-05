@@ -19,7 +19,7 @@ pipeline
         {
             steps 
             {
-                git branch: 'production', url: 'https://github.com/deanryandevops/WednesdaysWickedAdventures.git'
+                git branch: 'develop', url: 'https://github.com/deanryandevops/WednesdaysWickedAdventures.git'
             }
         }
         
