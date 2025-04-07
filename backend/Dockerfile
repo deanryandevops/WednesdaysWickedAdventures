@@ -5,14 +5,14 @@ FROM maven:3.9.6-eclipse-temurin-17 AS builder
 WORKDIR /app
 
 # Copy pom and mvnw files first (to leverage Docker layer caching)
-COPY pom.xml mvnw* ./
-COPY .mvn .mvn
+COPY backend/pom.xml mvnw* ./
+COPY backend/.mvn .mvn
 
 # Download dependencies
 RUN ./mvnw dependency:go-offline
 
 # Copy the rest of the source code
-COPY src src
+COPY backend/src src
 
 # Build the project
 RUN ./mvnw package -DskipTests
