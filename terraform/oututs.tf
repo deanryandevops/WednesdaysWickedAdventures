@@ -42,3 +42,8 @@ output "jump_box_instance_id" {
   description = "Jump Box Instance ID"
   value       = aws_instance.jump_box.id
 }
+
+output "ec2_grafana_public_ip" {
+  value = aws_instance.monitoring_ec2.public_ip
+  description = "Public IP of the monitoring EC2 instance"
+}
