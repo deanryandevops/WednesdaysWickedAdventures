@@ -42,18 +42,3 @@ variable "instance_type" {
   description = "EC2 instance type"
   default     = "t2.micro"
 }
-
-variable "db_name" {
-  description = "MongoDB database name"
-  default     = "mydatabase"
-}
-
-variable "db_username" {
-  description = "MongoDB username"
-  default     = "joeeightchars"
-}
-
-variable "db_password" {
-  description = "MongoDB password"
-  default     = "joeeightpass"
-}
