@@ -8,7 +8,7 @@ WORKDIR /usr/share/nginx/html
 RUN rm -rf ./*
 
 # Add files to NGINX root directory
-ADD ./ .
+ADD ./Frontend/ .
 
 # Expose port 80
 EXPOSE 80
